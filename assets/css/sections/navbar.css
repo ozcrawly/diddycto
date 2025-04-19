@@ -1,0 +1,36 @@
+/* navbar.css */
+#navbar {
+    background-color: var(--navbar-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar .navbar-brand {
+    font-size: 1.5em;
+}
+
+#navbar .navbar-brand img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#navbar .nav-link {
+    color: var(--white) !important;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+#navbar .nav-link:hover {
+    color: var(--background-color) !important;
+}
+
+@media (max-width: 768px) {
+    #navbar .navbar-nav {
+        background-color: var(--navbar-color);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+}

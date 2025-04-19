@@ -1,0 +1,16 @@
+/* main.css - Import all section styles */
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import "theme.css";
+@import "sections/navbar.css";
+@import "sections/home.css";
+@import "sections/about.css";
+@import "sections/tokenomics.css";
+@import "sections/market.css";
+@import "sections/whitepaper.css";
+@import "sections/roadmap.css";
+@import "sections/community.css";
+@import "sections/howtobuy.css";
+@import "sections/faqs.css";
+@import "sections/partners.css";
+@import "sections/disclaimer.css";
+@import "sections/footer.css";

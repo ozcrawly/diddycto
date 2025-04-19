@@ -1,0 +1,99 @@
+/* Market Info Section Styles */
+#market {
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#market .market-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#market .market-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+#market .market-card:hover {
+    transform: translateY(-10px);
+}
+
+#market .card-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: none;
+}
+
+#market .card-header i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#market .card-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#market .card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+#market .price-value,
+#market .mcap-value,
+#market .liquidity-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#market .price-change {
+    margin-top: 1rem;
+}
+
+#market .price-change .badge {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+#market .badge.up {
+    background-color: #28a745;
+}
+
+#market .badge.down {
+    background-color: #dc3545;
+}
+
+#market .chart-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+#market .chart-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    #market .market-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    #market .price-value,
+    #market .mcap-value,
+    #market .liquidity-value {
+        font-size: 1.5rem;
+    }
+}

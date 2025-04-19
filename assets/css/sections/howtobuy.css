@@ -1,0 +1,129 @@
+#how-to-buy {
+    background-color: var(--background-color);
+}
+
+#how-to-buy .title-cartoon {
+    color: var(--primary-color);
+    text-shadow: 2px 2px 0 #fff;
+}
+
+#how-to-buy .step-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+#how-to-buy .step-card:hover {
+    transform: translateY(-10px);
+}
+
+#how-to-buy .step-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#how-to-buy .step-image-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: -1rem -1rem 1rem -1rem;
+}
+
+#how-to-buy .step-image {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#how-to-buy .cartoon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,0,102,0.1), rgba(255,102,179,0.1));
+    border: 2px solid white;
+}
+
+#how-to-buy .step-card:hover .step-image {
+    transform: scale(1.1);
+}
+
+#how-to-buy .step-title {
+    font-size: 1.3em;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#how-to-buy .contract-box {
+    background: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px dashed var(--primary-color);
+}
+
+#how-to-buy .copy-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#how-to-buy .copy-btn:hover {
+    transform: scale(1.1);
+    background: var(--secondary-color);
+}
+
+#how-to-buy .btn {
+    transition: all 0.3s ease;
+}
+
+#how-to-buy .btn:hover {
+    transform: translateX(5px);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+#how-to-buy .bounce {
+    animation: bounce 2s infinite;
+}
+
+@media (max-width: 768px) {
+    #how-to-buy .step-image {
+        height: 400px;
+    }
+    
+    #how-to-buy .step-title {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,44 @@
+/* home.css */
+#home {
+    background-image: url("../../medias/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color);
+    z-index: 1;
+}
+
+#home .container {
+    position: relative;
+    z-index: 2;
+}
+
+#home h1 {
+    font-size: 4em;
+    color: var(--white);
+}
+
+#home .lead {
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+#home .btn {
+    margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 2.5em;
+    }
+}

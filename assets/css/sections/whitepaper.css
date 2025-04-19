@@ -1,0 +1,33 @@
+/* whitepaper.css */
+#whitepaper {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+#whitepaper .modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+#whitepaper .modal-header {
+    border-bottom: none;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 15px 15px 0 0;
+}
+
+#whitepaper .modal-title {
+    font-weight: bold;
+}
+
+#whitepaper .modal-body {
+    padding: 2rem;
+}
+
+#whitepaper .btn-close {
+    color: var(--white);
+}
+
+#whitepaper .lead {
+    margin-bottom: 2rem;
+}

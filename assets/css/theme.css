@@ -1,0 +1,163 @@
+/* theme.css - Global theme variables and common styles */
+:root {
+  /* Brand Colors */
+  --primary-color: #ff0000; /* Main brand color */
+  --secondary-color: #9500ff; /* Secondary brand color */
+  --background-color: #fafafe; /* Page background */
+  --text-color: #0b0b1e; /* Main text color */
+  --navbar-color: #000000; /* Navigation color */
+  --white: #ffffff; /* Pure white */
+  --overlay-color: rgba(255, 0, 0, 0.616); /* Modal/overlay color */
+
+  /* Button Colors */
+  --btn-primary-bg: #000000; /* Buy button background */
+  --btn-secondary-bg: #858585; /* Secondary button background */
+
+  /* Oil Button Colors */
+  --btn-oil-bg: #ff2d2d;
+  --btn-oil-text: #ffffff;
+  --oil-splash: rgba(255, 45, 45, 0.15);
+
+  /* Section Background Colors */
+  --section-bg-dark: #0a0a0a; /* Nearly black for contrast */
+  --section-bg-accent: rgba(255, 0, 0, 0.03); /* Very subtle red tint */
+
+  /* Section Text Colors */
+  --text-light: var(--white);
+  --text-dark: var(--text-color);
+
+  --bs-light: rgb(255, 0, 0);
+  --bs-light-rgb: 255, 0, 0;
+}
+
+.bg-light {
+  background-color: rgba(
+    var(--bs-light-rgb),
+    0.8
+  ) !important; /* Apply opacity here */
+}
+
+body {
+  font-family: "Luckiest Guy", cursive;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.btn {
+  border-radius: 50px;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  border: none;
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  border: none;
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+}
+
+.copy-btn.copied {
+  background-color: #28a745 !important;
+}
+
+.back-to-top {
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Oil Button Styles */
+.btn-oil {
+  text-decoration: none;
+  position: relative;
+  background-color: var(--btn-oil-bg);
+  color: var(--btn-oil-text);
+  border: none;
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-oil::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--oil-splash) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+
+.btn-oil:hover {
+  color: var(--btn-oil-text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 45, 45, 0.3);
+}
+
+.btn-oil:hover::before {
+  transform: translate(-50%, -50%) scale(2);
+}
+
+/* Oil Droplet Animation */
+@keyframes oilDrop {
+  0% {
+    transform: scale(0) translateY(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) translateY(20px);
+    opacity: 0;
+  }
+}
+
+.btn-oil::after {
+  content: "💧";
+  position: absolute;
+  font-size: 12px;
+  pointer-events: none;
+  animation: oilDrop 1s ease-in infinite;
+  opacity: 0;
+}
+
+.btn-oil:hover::after {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .btn-oil {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

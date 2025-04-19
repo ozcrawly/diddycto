@@ -1,0 +1,95 @@
+/* community.css */
+#community {
+    background-color: var(--background-color);
+    padding: 4rem 0;
+}
+
+#community .container {
+    max-width: 1200px;
+}
+
+#community h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#community .social-icon {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#community .social-icon:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#community .social-icon i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+/* Specific social media colors */
+#community .fa-telegram { color: #0088cc; }
+#community .fa-x-twitter { color: #1DA1F2; }
+#community .fa-discord { color: #7289DA; }
+#community .fa-medium { color: #00ab6c; }
+#community .fa-youtube { color: #FF0000; }
+#community .fa-tiktok { color: #000000; }
+#community .fa-instagram { 
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#community .social-icon:hover i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+#community .social-icon p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Animation for icons */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+#community .social-icon i {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hover effects for each platform */
+#community .social-icon:hover.telegram { background: rgba(0, 136, 204, 0.1); }
+#community .social-icon:hover.twitter { background: rgba(29, 161, 242, 0.1); }
+#community .social-icon:hover.discord { background: rgba(114, 137, 218, 0.1); }
+#community .social-icon:hover.medium { background: rgba(0, 171, 108, 0.1); }
+#community .social-icon:hover.youtube { background: rgba(255, 0, 0, 0.1); }
+#community .social-icon:hover.tiktok { background: rgba(0, 0, 0, 0.1); }
+#community .social-icon:hover.instagram { background: rgba(225, 48, 108, 0.1); }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #community .social-icon {
+        padding: 0.5rem;
+    }
+
+    #community .social-icon i {
+        font-size: 2rem;
+    }
+
+    #community .social-icon p {
+        font-size: 0.9em;
+    }
+}

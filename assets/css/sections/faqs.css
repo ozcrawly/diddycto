@@ -1,0 +1,60 @@
+/* faqs.css */
+#faqs {
+    padding: 5rem 0;
+    background-color: var(--background-color);
+}
+
+#faqs .accordion-item {
+    background: transparent;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+#faqs .accordion-button {
+    background-color: var(--white);
+    color: var(--text-color);
+    font-size: 1.1em;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#faqs .accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px 10px 0 0;
+}
+
+#faqs .accordion-button::after {
+    background-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+#faqs .accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+#faqs .accordion-body {
+    background-color: var(--white);
+    color: var(--text-color);
+    border-radius: 0 0 10px 10px;
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+#faqs .accordion-button:hover {
+    transform: translateX(5px);
+}
+
+#faqs .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    #faqs .accordion-button {
+        padding: 1rem;
+        font-size: 1em;
+    }
+}

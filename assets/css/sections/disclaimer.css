@@ -1,0 +1,102 @@
+/* disclaimer.css */
+#disclaimer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}
+
+#disclaimer .modal-content {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 1.75rem auto;
+    position: relative;
+}
+
+#disclaimer .modal-header {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 15px 15px 0 0;
+    padding: 1rem 1.5rem;
+}
+
+#disclaimer .modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#disclaimer .modal-title i {
+    color: #ffc107;
+}
+
+#disclaimer .modal-body {
+    padding: 2rem;
+}
+
+#disclaimer .disclaimer-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+#disclaimer h6 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+#disclaimer .alert-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 10px;
+    padding: 1.25rem;
+}
+
+#disclaimer .modal-footer {
+    border: none;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+#disclaimer .btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#disclaimer .btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 102, 0.2);
+}
+
+#disclaimer .btn-close {
+    color: white;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#disclaimer .btn-close:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    #disclaimer .modal-content {
+        margin: 1rem;
+    }
+    
+    #disclaimer .modal-body {
+        padding: 1.5rem;
+    }
+    
+    #disclaimer .disclaimer-content {
+        font-size: 0.9rem;
+    }
+}
